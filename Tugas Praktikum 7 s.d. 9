@@ -1,0 +1,24 @@
+void main() {
+  String nama = "Ainul Maarif"; 
+  String nim = "23.52.0010";   
+
+  print('--- Program Pencari Bilangan Prima (0 - 201) ---');
+
+  for (int angka = 0; angka <= 201; angka++) {
+    // Angka 0 dan 1 bukan bilangan prima
+    if (angka < 2) continue;
+
+    bool isPrima = true;
+
+    for (int i = 2; i <= angka ~/ 2; i++) {
+      if (angka % i == 0) {
+        isPrima = false; 
+        break;
+      }
+    }
+
+    if (isPrima) {
+      print('Bilangan Prima ditemukan: $angka -> (Oleh: $nama | NIM: $nim)');
+    }
+  }
+}
